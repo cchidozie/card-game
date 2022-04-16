@@ -62,9 +62,9 @@ function straightening(value) {
   }
 }
 
+
 setInterval(function () {
   if (result.innerText != 'Result') {
-    console.log('it worked')
     result.classList.toggle('winnerJingle')
   }
-}, 0500)
+}, 0300)
