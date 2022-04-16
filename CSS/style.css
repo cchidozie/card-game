@@ -16,13 +16,12 @@ body {
   background-image: url(https://images.unsplash.com/photo-1601370690183-1c7796ecec61?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
 }
 
-
-
 /**
  * Render the `main` element consistently in IE.
  */
 
-main, header {
+main,
+header {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,14 +29,16 @@ main, header {
   color: beige;
 }
 
-.gameBoard{
- display: flex;
+.gameBoard {
+  display: flex;
   justify-content: center;
   align-items: center;
+  gap: 5em;
 }
 
-h1{
- font-size: 3em;
+h1 {
+  font-size: 3em;
+  margin-bottom: 2em;
 }
 
 img {
@@ -45,12 +46,18 @@ img {
   height: auto;
 }
 
-.getCard{
- background-color: transparent;
- border: 1px solid white;
- color: white;
- padding: 10px 30px;
- cursor: pointer;
- margin-top: 3rem;
+.getCard {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 30px;
+  cursor: pointer;
+  margin-top: 3rem;
 }
 
+.box, .outcome {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  align-items: center;
+}
