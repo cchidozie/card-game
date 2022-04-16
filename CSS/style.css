@@ -38,12 +38,16 @@ header {
 
 h1 {
   font-size: 3em;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+}
+
+#result{
+ font-size: 4em;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+  height: 19.625rem;
+
 }
 
 .getCard {
@@ -52,12 +56,18 @@ img {
   color: white;
   padding: 10px 30px;
   cursor: pointer;
-  margin-top: 3rem;
+  margin-top: 1rem;
+  
 }
 
-.box, .outcome {
+.box,
+.outcome {
   display: flex;
   justify-items: center;
   flex-direction: column;
   align-items: center;
+}
+
+.winnerJingle{
+ color: #d6a739
 }

@@ -1,5 +1,6 @@
 let deckID = ''
 let button = document.querySelector('.getCard')
+let result = document.querySelector('#result')
 
 //Get a deck ID from deckofcardsapi
 fetch('https://www.deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1')
@@ -27,14 +28,12 @@ function getCard() {
 
       console.log(playerOneCardValue, playerTwoCardValue)
 
-      if(playerOneCardValue > playerTwoCardValue){
-       document.querySelector('#result').innerText = "Player One Wins!!!!"
-      }
-      else if (playerOneCardValue < playerTwoCardValue) {
-       document.querySelector('#result').innerText = 'Player Two Wins!!!!'
-      }
-      else{
-        document.querySelector('#result').innerText = `it's a tie!!!!`
+      if (playerOneCardValue > playerTwoCardValue) {
+        result.innerText = 'Player One Wins!!!!'
+      } else if (playerOneCardValue < playerTwoCardValue) {
+        result.innerText = 'Player Two Wins!!!!'
+      } else {
+        result.innerText = `it's a tie!!!!`
       }
     })
     .catch((err) => {
@@ -46,19 +45,26 @@ function straightening(value) {
   let lowerCaseVal = value.toLowerCase()
   switch (lowerCaseVal) {
     case 'ace':
-      return 14;
-      break;
+      return 14
+      break
     case 'king':
-      return 13;
-      break;
+      return 13
+      break
     case 'queen':
-      return 12;
-      break;
+      return 12
+      break
     case 'jack':
       return 11
       break
     default:
-      return Number(lowerCaseVal);
-      break;
+      return Number(lowerCaseVal)
+      break
   }
 }
+
+setInterval(function () {
+  if (result.innerText != 'Result') {
+    console.log('it worked')
+    result.classList.toggle('winnerJingle')
+  }
+}, 0500)
